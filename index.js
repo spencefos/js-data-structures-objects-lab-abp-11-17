@@ -11,3 +11,15 @@ const driver = {}
    obj[key] = value;
    return driver;
  }
+ function deleteFromDriverByKey(driver, key){
+
+  var newDriver = Object.assign({}, driver);
+    delete newDriver[key];
+    return newDriver;
+}
+
+  function destructivelyDeleteFromDriverByKey(driver, key){
+
+    delete driver[key];
+    return driver;
+  }
